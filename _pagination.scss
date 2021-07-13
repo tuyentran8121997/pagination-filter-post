@@ -1,0 +1,31 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+}
+.pagination-item {
+    &__link {
+        font-size: 2rem;
+        padding: 0.5rem 2rem;
+        color: $gray-dark;
+        transition: all 0.3s ease;
+    }
+    &__link:hover {
+        color: $gray-blur;
+    }
+    &__link--active {
+        background-color: $primary-color;
+        color: #fff;
+    }
+}
+.btn-prev,
+.btn-next {
+    padding: 0.5rem 2rem;
+    font-size: 2rem;
+    color: $gray-dark;
+    &:hover {
+        color: $gray-blur;
+    }
+}
+

@@ -1,0 +1,26 @@
+.sidebar {
+    background-color: #fff;
+    border-radius: 3px;
+    &__heading {
+        padding: 1.5rem;
+        text-transform: uppercase;
+        border-bottom: 2px solid #eee;
+    }
+    &__item {
+        border-bottom: 1px solid #eee;
+    }
+    &__link {
+        position: relative;
+        display: inline-block;
+        padding: 1.5rem;
+        color: $gray-dark;
+        font-weight: 600;
+        transition: all 0.2s linear;
+        right: 0;
+    }
+
+    &__link:hover {
+        right: -1rem;
+        color: $primary-color;
+    }
+}

@@ -1,0 +1,44 @@
+/* mobile vs tablet */
+@media (max-width: 1023px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+    .header {
+        height: 7rem;
+    }
+    .header-with-search {
+        padding: 1rem 0;
+    }
+    .bar {
+        display: block;
+    }
+}
+
+/* tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display:  none;
+    }
+}
+
+/* mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .header-with-search {
+        padding: 1rem;
+    }
+    .header__search {
+        padding: 0;
+    }
+    .footer {
+        padding: 0 1rem;
+    }
+    #main {
+        padding: 0 1rem;
+    }
+    .pagination-item__link {
+        padding: 0.5rem 1rem;
+    }
+}

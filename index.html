@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post Pagination and filter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Start header  -->
+        <header class="header">
+            <div class="grid wide">
+                <nav class="navbar hide-on-mobile-tablet">
+                    <ul class="navbar__list">
+                        <li class="navbar__item navbar__item--qr">
+                            Đọc tin tức trên ứng dụng
+                            <!-- Start qr code -->
+                            <div class="qrcode">
+                                <img src="./img/qrcode.png" alt="" class="qrcode__img">
+                                <div class="qrcode__apps">
+                                    <a href="#" class="qrcode__link">
+                                        <img src="./img/appstore.png" alt="" class="qrcode__app-img">
+                                    </a>
+                                    <a href="#" class="qrcode__link">
+                                        <img src="./img/googleplay.png" alt="" class="qrcode__app-img">
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- End qr code -->
+                        </li>
+                        <li class="navbar__item">
+                            Kết nối
+                            <a href="#" class="navbar__icon-link">
+                                <i class="navbar__icon fa fa-facebook"></i>
+                            </a>
+                            <a href="#" class="navbar__icon-link">
+                                <i class="navbar__icon fa fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar__list">
+                        <li class="navbar__item">
+                            <i class="navbar__icon fa fa-bell"></i>
+                            Thông báo
+                        </li>
+                        <li class="navbar__item">
+                            <i class="navbar__icon fa fa-question-circle"></i>
+                            Trợ giúp
+                        </li>
+                        <li class="navbar__item navbar__user">
+                            <img src="https://source.unsplash.com/random" alt="" class="navbar__user-image">
+                            <span class="navbar__user-name">Trần Quang Tuyên</span>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header-with-search">
+                    <div class="header__logo">
+                        <a href="index.html">
+                            <img src="./img/logo.svg" alt="" class="header__logo-img">
+                        </a>
+                    </div>
+                    <div class="header__search hide-on-mobile">
+                        <form action="" class="header__search-form">
+                            <input type="text" class="header__search-input">
+                            <button class="header__search-btn"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__temp hide-on-mobile-tablet">
+                        <strong class="header__temp-address">Hồ Chí Minh</strong>
+                        <span>28°C / 26-34°C</span>
+
+                        <img class="header__temp-img" src="./img/rain.png" alt="">
+                    </div>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End header  -->
+
+        <!-- Start main -->
+        <main id="main">
+            <div class="grid wide">
+                <div class="row app__content">
+                    <div class="col l-3 m-0 c-0">
+                        <div class="sidebar">
+                            <h3 class="sidebar__heading">
+                                <i class="fa fa-list"></i> Danh mục
+                            </h3>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item my-sidebar__item">
+                                    <a href="#" class="sidebar__link">All</a>
+                                </li>
+                                <!-- <li class="sidebar__item">
+                                    <a href="#" class="sidebar__link">Sport</a>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col l-9 m-12 c-12">
+                        <div class="no-result">Item not found. Please enter the other name!</div>
+                        <div class="post-list">
+                            <div class="row">
+
+                                <!-- Start post item -->
+                                <!-- <div class="col l-4 m-6 c-12">
+                                    <a href="#" class="post-item">
+                                        <img src="https://source.unsplash.com/random" alt="" class="post-item__img">
+                                        <h3 class="post-item__title">Title</h3>
+                                        <p class="post-item__desc">Lorem ipsum dolor sit amet consectetur, adipisicing
+                                            elit. Vitae quos reiciendis cum laborum sapiente modi magni adipisci hic
+                                            mollitia recusandae expedita ipsum quaerat, debitis reprehenderit dicta,
+                                            dolore error iusto. Quo?</p>
+                                    </a>
+                                </div> -->
+                                <!-- End post item -->
+
+                            </div>
+                        </div>
+                        <ul class="pagination">
+                            <li class="pagination-item" id="my-number-page">
+                                <a href="#" class="btn-prev">
+                                    <i class="pagination-item__icon fa fa-angle-left"></i>
+                                </a>
+                            </li>
+                            <!-- <li class="pagination-item">
+                                <a href="#" class="pagination-item__link pagination-item__link--active">1</a>
+                            </li> -->
+                            <li class="pagination-item">
+                                <a href="#" class="btn-next">
+                                    <i class="pagination-item__icon fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- End main -->
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="my-modal-content">
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Start footer -->
+        <footer class="footer">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-3 m-6 c-12">
+                        <h3 class="footer__heading">Giới thiệu</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">Về Zingnews</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">Tuyển dụng</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">Điều khoản</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-3 m-6 c-12">
+                        <h3 class="footer__heading">Danh mục</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">Thể thao</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">Phim ảnh</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">Thời trang</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-3 m-6 c-12">
+                        <h3 class="footer__heading">Theo giõi</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    <i class="footer__icon fa fa-facebook"></i>Facebook
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    <i class="footer__icon fa fa-instagram"></i>Instagram
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    <i class="footer__icon fa fa-linkedin"></i>Linkedin
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-3 m-6 c-12">
+                        <h3 class="footer__heading">Đọc tin tức trên ứng dụng</h3>
+                        <div class="footer__download">
+                            <img src="./img/qrcode.png" alt="" class="footer__download-qr">
+                            <div class="footer__download-apps">
+                                <a href="#">
+                                    <img src="./img/appstore.png" alt="" class="footer__download-img">
+                                </a>
+                                <a href="#">
+                                    <img src="./img/googleplay.png" alt="" class="footer__download-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="grid wide">
+                    <p class="footer-text">@2021 - Bản quyền thuộc công ty Zingnews</p>
+                </div>
+            </div>
+        </footer>
+        <!-- End footer foorter -->
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
